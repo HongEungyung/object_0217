@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>date 객체</title>
+  </head>
+  <body>
+    <div id="container">
+      <p>
+        현재시각:
+        <span id="current" class="display">
+          <!-- js로 출력 -->
+        </span>
+      </p>
+    </div>
+    <script>
+        // setInterval(함수 , 초) : 일정한 시간 간격으로 반복 실행
+        setInterval(displayNow , 3000)
+      // 현재시간 함수
+      function displayNow() {
+        let now = new Date();
+        console.log(now);
+        console.log(now.getHours());
+        const currentTime = now.toLocaleTimeString()
+        console.log(currentTime);
+        const display = document.querySelector(".display")
+        display.innerHTML = `${currentTime}`
+      }
+    //   displayNow();
+    </script>
+  </body>
+</html>
