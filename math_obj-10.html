@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math 객체</title>
+</head>
+<body>
+    <script>
+        // max() 주어진 수치 중 가장 큰 값
+        let maxNum = Math.max(10, 5, 8, 30)
+        console.log(`max(): ${maxNum}`); // = 30 찍힘
+        // min() 주어진 수치 중 가장 작은 값
+        let minNum = Math.min(10, 5, 8, 30)
+        console.log(`min(): ${minNum}`); // = 5
+
+        let num = 2.6234
+        // round() 소수점 "첫째 자리"만 반올림 하기
+        let roundNum = Math.round(num)
+        console.log(roundNum); // = 3
+        // floor() 소수점을 버리고 정수로 변환
+        let floorNum = Math.floor(num)
+        console.log(floorNum); // = 2
+        // ceil() 소수점을 올림하여(소수점 두,세자리에 올릴 숫자 있으면 계속 다 반올림해감) 정수로 변환
+        let ceilNum = Math.ceil(num)
+        console.log(ceilNum); // = 3
+        // random() 0 이상 1 사이의 난수 (ex : 0.8214)
+        let randomNum = Math.random()
+        console.log(randomNum); // = 0.7158067126419068 (무작위 숫자)
+        // PI 원주율 값을 반환
+        let piNum = Math.PI
+        console.log(piNum); // = 3.141592653589793
+        
+    </script>
+</body>
+</html>

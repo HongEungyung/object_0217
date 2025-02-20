@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위바위보 게임</title>
+</head>
+<body>
+    <h1>가위 바위 보 게임</h1>
+    <script>
+        let game = prompt("가위, 바위, 보 중 선택해주세요.")
+        let gameNum
+        switch(game){
+            case "가위" :
+                gameNum = 1 // 1 숫자로 gameNum을 재할당
+                break
+            case "바위" :
+                gameNum = 2
+                break
+            case "보" :
+                gameNum = 3
+                break
+                default:
+                alert("잘못 작성했습니다. '가위', '바보', '보' 셋 중에 선택하세요.")
+        }
+        let computer = Math.floor(Math.random() * 3) + 1
+        console.log(`랜덤숫자 : ${computer}`);
+        // 선택 이미지 
+        // document.write(`${computer}`)
+        document.write(`<img src="images/math_img_${computer}.jpg" alt="이미지${computer}">`)
+        if(gameNum === computer){
+            document.write(`<img src="images/rightMessage.jpg" alt="성공이미지">`)
+        }else{
+            document.write(`<img src="images/wrongMessage.jpg" alt="실패이미지">`)
+        }
+    </script>
+</body>
+</html>

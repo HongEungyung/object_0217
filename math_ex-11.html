@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>당첨자 발표</title>
+  </head>
+  <body>
+    <h1>당첨자 발표</h1>
+    <script>
+      let seed = prompt("전체 응모자 수");
+      console.log(seed); // = 내가 입력한 숫자
+
+      // let picked = Math.floor(Math.random())
+      // console.log(picked);
+      // ↑ 계속 0만 나옴 -> random 이 0.xxxx 소수점만 나오는 앤데 거기다 floor를 해서 소수점 아래 숫자 다 없어짐.
+
+      // ↓ 1을 더하는 이유 : 기준을 1부터 시작하기 위해서
+      let picked = Math.floor(Math.random() * seed + 1);
+      // console.log(Math.random() * seed + 1);
+      console.log(picked);
+      document.write(`전체 인원수 : ${seed} <br>`);
+      document.write(`당첨자 번호 : ${picked}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>문서를 열면 팝업 창이 표시됩니다.</p>
+    <script>
+        function openPopup(){
+            let newWindow = window.open("window_obj-13.html" , "popup" , "width=500 , height=500 , top=200 , left=500")
+            // let newWindow = window.open("연결url" , "사용자지정이름(이걸 지어줘야 새로고침 시 계속 안뜸)" , "팝업 너비 , 팝업 높이 , 팝업 뜨는 위치 top , 팝업 뜨는 위치 left")
+            if(newWindow === null){
+                alert("팝업이 차단되어 있습니다. 팝업 차단을 해제해 주세요.")
+            }
+            // newWindow.moveBy(200,200)
+            // 새로고침 할때마다 팝업창 200씩 이동(이건 딱히 쓸모없음)
+        }
+        openPopup()
+    </script>
+</body>
+</html>
